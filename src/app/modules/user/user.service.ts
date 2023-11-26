@@ -9,8 +9,8 @@ const getAllUsersFromDB = async () => {
   const result = await UserDataModel.find();
   return result;
 };
-const getSingleUsersFromDB = async (id: number) => {
-  const result = await UserDataModel.findOne({ id: id });
+const getSingleUsersFromDB = async (userId: number) => {
+  const result = await UserDataModel.find({ userId: userId });
   // const result = await UserDataModel.aggregate([{ $match: { id: id } }]);
   return result;
 };

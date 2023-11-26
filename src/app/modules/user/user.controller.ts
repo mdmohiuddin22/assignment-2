@@ -31,9 +31,9 @@ const getAllUsers = async (req: Request, res: Response) => {
 };
 const getSingleUser = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
+    const { userId } = req.params;
     // const numericId = parseInt(id);
-    const result = await UserServices.getSingleUsersFromDB(id);
+    const result = await UserServices.getSingleUsersFromDB(userId);
     res.status(200).json({
       success: true,
       message: "User is fetched successfully!",
