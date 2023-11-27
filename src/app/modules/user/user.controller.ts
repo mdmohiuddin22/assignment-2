@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { UserServices } from "./user.service";
-import { type } from "os";
 
 const createUser = async (req: Request, res: Response) => {
   try {
@@ -32,8 +31,8 @@ const getAllUsers = async (req: Request, res: Response) => {
 const getSingleUser = async (req: Request, res: Response) => {
   try {
     const { userId } = req.params;
-    // const numericId = parseInt(id);
-    const result = await UserServices.getSingleUsersFromDB(userId);
+    const numericId = parseInt(userId);
+    const result = await UserServices.getSingleUsersFromDB(numericId);
     res.status(200).json({
       success: true,
       message: "User is fetched successfully!",

@@ -10,7 +10,7 @@ app.use(cors());
 app.use("/api/users", UserRoutes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello tutul!");
+  res.send("welcome to mongoose!");
 });
 
 export default app;

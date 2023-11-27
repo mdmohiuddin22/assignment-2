@@ -10,7 +10,7 @@ const UserDataSchema = new Schema<UserData>({
     lastName: { type: String, required: true },
   },
   age: { type: Number, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   isActive: ["active", "inActive"],
   hobbies: { type: [], required: true },
   address: {
